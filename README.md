@@ -87,20 +87,6 @@ Current Version - WiFi-6.
 
 Industries use Enterprise Network provided by Internet Service Provider (ISP) to access Global internet.
 
-## INTERNET FLOW DIAGRAM
-
-GLOBAL INTERNET
-      ||
-INTERNET SERVICE PROVIDER
-      ||
-  LEASED LINE
-      ||
-    ROUTER
-      ||
-  ACCESS POINT
-      ||
-  WIFI USERS
-
 ## Expected Outcome
 
 The system helps users understand their WiFi issues clearly and provides suggestions to improve performance, making troubleshooting easier and faster.
