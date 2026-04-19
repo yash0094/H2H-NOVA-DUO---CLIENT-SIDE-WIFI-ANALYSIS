@@ -89,13 +89,17 @@ Industries use Enterprise Network provided by Internet Service Provider (ISP) to
 
 ## INTERNET FLOW DIAGRAM
 
-'''mermaid
-A[Global Internet] --> B[ISP]
-B --> C[leased line]
-C --> D[Router]
-D --> E[Access points]
-E --> F[WiFi Users]
-'''
+GLOBAL INTERNET
+      ||
+INTERNET SERVICE PROVIDER
+      ||
+  LEASED LINE
+      ||
+    ROUTER
+      ||
+  ACCESS POINT
+      ||
+  WIFI USERS
 
 ## Expected Outcome
 
