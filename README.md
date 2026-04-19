@@ -79,7 +79,7 @@ The proposed system collects WiFi performance metrics such as latency, jitter, p
 
 ## Explanation  
 ## WIFI 
-** WiFi( Wireless Fidelity ) is a network that uses radio waves to connect devices like laptops,
+WiFi( Wireless Fidelity ) is a network that uses radio waves to connect devices like laptops,
 phones and other smart devices to the internet without cables.
 It follows IEEE 802.11 Standards.
 Common Frequency range are 2.4 GHZ (longer range) and 5 GHZ (Faster speed).
