@@ -1,4 +1,4 @@
-Client Side WiFi Network Experience Analyzer
+CLIENT SIDE WIFI NETWORK EXPERIENCE ANALYSIS 
 
 ---
 
@@ -15,7 +15,7 @@ NOVA-DUO
 
 ---
 
-## Project Overview
+## Project Overview (Description)
 
 In today’s environment, WiFi connectivity plays an important role in daily activities such as online learning, communication, and entertainment. However, users often experience issues like slow internet speed, high latency, and unstable connections without understanding the cause.
 
@@ -25,13 +25,46 @@ This project focuses on analyzing WiFi performance from the client side and prov
 
 ## Problem Statement
 
-Users face WiFi performance problems but are unable to identify the exact reason behind them. Existing tools provide limited information and do not explain the root cause.
+USERS FACE WIFI PERFORMANCE ISSUES BUT ARE UNABLE TO IDENTIFY EXACT REASON BEHIND IT. EXISTING TOOLS PROVIDE LIMITED INFORMATION ABOUT THE CAUSE. THE PROBLEM NEEDS A FIX.
 
 ---
 
 ## Proposed Solution
 
-The proposed system collects WiFi performance metrics such as latency, jitter, packet loss, and throughput. It analyzes this data to detect issues and identifies the possible root cause. The system also provides suggestions to improve network performance.
+Our project is a *Smart Client-Side WiFi Diagnostics System* that helps users quickly identify and solve WiFi issues without needing technical knowledge or waiting for customer support. The mobile app continuously analyzes network parameters such as signal strength, latency, speed, channel congestion, and device load directly from the user side.
+
+When a problem occurs, the system intelligently determines the most likely root cause—such as weak signal, router overload, interference, or ISP outage—and instantly provides personalized solutions like moving closer to the router, switching bands, changing channels, or restarting the router.
+
+The app also calculates a *WiFi Health Score* to help users understand overall network quality in a simple way.
+
+## How Our Project Solves the Problem
+
+Traditional WiFi troubleshooting is slow and based on guesswork. Users often restart routers repeatedly or contact support without knowing the actual issue.
+
+Our solution solves this by:
+
+* Detecting issues in real time
+* Identifying the exact root cause instead of only showing speed tests
+* Giving instant step-by-step solutions
+* Reducing downtime and frustration
+* Helping users optimize their home or office WiFi performance
+
+## What Makes It Unique
+
+Unlike regular speed test apps, our project focuses on *diagnosis + solution*, not just measurement.
+
+### Unique Features:
+
+* *AI-based Root Cause Analysis* – Finds why WiFi failed
+* *Predictive Alerts* – Warns users before performance drops
+* *One-Tap Smart Fix Recommendations*
+* *Client-side Detection* – Works directly from user device
+* *WiFi Health Score Dashboard* – Easy for non-technical users
+* *Scalable for ISPs & Enterprises* to reduce support tickets
+
+## One-Line Pitch
+
+> We don’t just test WiFi speed — we diagnose problems, predict failures, and fix them intelligently.
 
 ---
 
@@ -45,14 +78,23 @@ The proposed system collects WiFi performance metrics such as latency, jitter, p
 
 ---
 
-## Features
+## Core Features Implemented
 
-- WiFi performance monitoring
-- Signal strength analysis
-- Latency, jitter, and packet loss measurement
-- Root cause detection
-- QoE classification (Good / Moderate / Poor)
-- User-friendly dashboard
+* Real-time WiFi scanning and network status check
+* Signal strength, speed, ping, and latency monitoring
+* WiFi Health Score for overall performance rating
+* Root cause detection for common WiFi issues
+* Weak signal and dead-zone identification
+* Router overload / too many connected devices detection
+* Channel congestion analysis
+* ISP issue vs local WiFi issue identification
+* Instant troubleshooting suggestions
+* Best WiFi channel recommendation
+* 2.4 GHz vs 5 GHz band usage guidance
+* Performance drop and connectivity alerts
+* Simple user-friendly mobile app interface
+* One-tap Scan → Analyze → Detect → Solve workflow
+* Cloud-ready system for future ISP / enterprise integration
 
 ---
 
