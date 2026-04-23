@@ -1,0 +1,24 @@
+ <script>window.addEventListener(\"error\",function(e){if(e.error instanceof DOMException&&e.error.name===\"DataCloneError\"&&e.message&&e.message.includes(\"PerformanceServerTiming\")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
+        <script src=\"https://assets.emergent.sh/scripts/emergent-main.js\"></script>
+        <script>
+        (function() {
+          function killBadge() {
+            // Match by id
+            var el = document.getElementById('emergent-badge');
+            if (el && el.parentNode) el.parentNode.removeChild(el);
+            // Also match by text content as a fallback
+            document.querySelectorAll('a[href*=\"emergent.sh\"]').forEach(function(a){
+              if (a.textContent && a.textContent.indexOf('Made with Emergent') !== -1) {
+                a.parentNode && a.parentNode.removeChild(a);
+              }
+            });
+          }
+          killBadge();
+          if (typeof MutationObserver !== 'undefined') {
+            var obs = new MutationObserver(killBadge);
+            obs.observe(document.documentElement, { childList: true, subtree: true });
+          } else {
+            setInterval(killBadge, 500);
+          }
+        })();
+        </script>
