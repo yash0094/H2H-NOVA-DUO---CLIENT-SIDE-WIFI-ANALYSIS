@@ -10,8 +10,8 @@ NOVA-DUO
 
 ## Members
 
-- Yashwanth N  (contributors)
-- Pramith Sagar V  (contributors)
+- Yashwanth N  (contributor)
+- Pramith Sagar V  (contributor)
 
 ---
 
