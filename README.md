@@ -161,7 +161,7 @@ This project provides a simple and effective way to analyze WiFi performance fro
 
 ---
 
-STEPS TO CONFIGURE BET DOCTOR APP:
+STEPS TO CONFIGURE NET DOCTOR APP:
 
 1. PASTE THE DEPLOYMENT LINK ON WEB BROWSER 
 2. DOWNLOAD IT TO DESKTOP SITE
