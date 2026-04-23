@@ -1,129 +1,145 @@
-# Net Doctor — WiFi Diagnostics (Static Web App)
-
-A client-side WiFi analysis dashboard. Runs 100% in the browser — no backend, no database, no API keys.
-
-## Features
-
-- Live WiFi health score (0–100) with a circular gauge
-- Real-time simulated telemetry (signal, latency, throughput, devices, congestion)
-- Rule-based issue detection with severity tagging
-- Smart Recommendations engine (one-tap fixes)
-- 8-step animated diagnostic runner ("Fix My WiFi")
-- WiFi zone heatmap
-- Problem timeline (persisted to `localStorage`)
-- Prediction alerts
-- Connected devices list
-- Shareable PDF report (client-side jsPDF)
-
-## Tech Stack
-
-- React 19 + React Router 7
-- Tailwind CSS + Shadcn primitives + Sonner toasts
-- Phosphor Icons
-- jsPDF (client-side PDF export)
-- CRACO (for `@/` path alias)
-
-## Local Development
-
-```bash
-yarn install
-yarn start
-```
-
-Open `http://localhost:3000`.
-
-## Production Build
-
-```bash
-yarn build
-```
-
-Output goes to `./build/` as fully static assets.
+📶 CLIENT SIDE WIFI NETWORK EXPERIENCE ANALYSIS 
 
 ---
 
-## Deploying to Render (Static Site)
+## Team Name
 
-### Option A — One-click via `render.yaml`
-
-This repo already includes a `render.yaml`. On Render:
-
-1. Push this repo to GitHub.
-2. Go to Render → **New +** → **Blueprint**.
-3. Connect your GitHub repo → Render auto-detects `render.yaml` and creates the site.
-4. Click **Apply**. Done.
-
-### Option B — Manual setup
-
-1. Render dashboard → **New +** → **Static Site**.
-2. Connect your GitHub repo.
-3. Settings:
-   - **Build command**: `yarn install && yarn build`
-   - **Publish directory**: `build`
-   - **Environment variables** (add one):
-     - `CI` = `false`   *(prevents warnings from failing the build)*
-     - `NODE_VERSION` = `20.11.0`
-4. Under **Redirects/Rewrites** add:
-   - Source: `/*`
-   - Destination: `/index.html`
-   - Action: **Rewrite**   *(required for React Router to work on deep links)*
-5. Click **Create Static Site**.
-
-Render will build in ~2 minutes and give you a public `https://net-doctor.onrender.com`-style URL.
+NOVA-DUO
 
 ---
 
-## Project Structure
+## Members
 
-```
-.
-├── public/
-│   ├── index.html
-│   ├── favicon.ico, manifest.json, robots.txt
-│   └── netdoctor-architecture.png, netdoctor-user-flow.png  (optional diagrams)
-├── src/
-│   ├── index.js          # React entry
-│   ├── index.css         # Global styles + theme tokens
-│   ├── App.js            # Routes + Toaster
-│   ├── App.css
-│   ├── components/
-│   │   ├── AppShell.jsx  # Top bar + sidebar + mobile bottom nav
-│   │   ├── HealthGauge.jsx
-│   │   └── MetricCard.jsx
-│   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── Diagnose.jsx
-│   │   ├── Recommendations.jsx
-│   │   ├── Heatmap.jsx
-│   │   ├── Devices.jsx
-│   │   ├── Timeline.jsx
-│   │   └── Prediction.jsx
-│   └── lib/
-│       ├── api.js         # Re-exports netdoctor.js (keeps imports compatible)
-│       ├── netdoctor.js   # All client-side logic (replaces backend)
-│       └── reportPdf.js   # jsPDF report generator
-├── craco.config.js       # `@/` alias
-├── tailwind.config.js
-├── postcss.config.js
-├── render.yaml
-├── package.json
-└── yarn.lock
-```
+- Yashwanth N
+- Pramith Sagar V
 
-## Why no backend?
+---
 
-The original app had a FastAPI + MongoDB backend that simulated the WiFi telemetry and called Claude Sonnet 4.5 for recommendations. For a Render **Static Site** deployment (which hosts static files only), all that logic has been moved to `src/lib/netdoctor.js` running in the browser:
+## Project Overview (Description)
 
-- Simulated telemetry engine with time-of-day jitter
-- Rule-based health score + issue detection
-- Rule-based recommendation engine (the LLM fallback path)
-- `localStorage`-backed problem timeline
-- In-memory diagnostic session runner
+In today’s environment, WiFi connectivity plays an important role in daily activities such as online learning, communication, and entertainment. However, users often experience issues like slow internet speed, high latency, and unstable connections without understanding the cause.
 
-If you later want LLM-powered recommendations, either:
-- Deploy the FastAPI backend as a separate Render **Web Service** and restore `src/lib/api.js` to call it, or
-- Use a serverless function (Render / Vercel / Netlify Functions) to proxy LLM calls with a secret API key.
+This project focuses on analyzing WiFi performance from the client side and providing clear insights into network issues.
 
-## License
+---
 
-MIT
+## Problem Statement
+
+USERS FACE WIFI PERFORMANCE ISSUES BUT ARE UNABLE TO IDENTIFY EXACT REASON BEHIND IT. EXISTING TOOLS PROVIDE LIMITED INFORMATION ABOUT THE CAUSE. THE PROBLEM NEEDS A FIX.
+
+---
+
+## Proposed Solution
+
+Our project is a **Smart Client-Side WiFi Diagnostics System** that helps users quickly identify and solve WiFi issues without needing technical knowledge or waiting for customer support. The mobile app continuously analyzes network parameters such as signal strength, latency, speed, channel congestion, and device load directly from the user side.
+
+When a problem occurs, the system intelligently determines the most likely root cause—such as weak signal, router overload, interference, or ISP outage—and instantly provides personalized solutions like moving closer to the router, switching bands, changing channels, or restarting the router.
+
+The app also calculates a **WiFi Health Score** to help users understand overall network quality in a simple way.
+
+## How Our Project Solves the Problem
+
+Traditional WiFi troubleshooting is slow and based on guesswork. Users often restart routers repeatedly or contact support without knowing the actual issue.
+
+Our solution solves this by:
+
+* Detecting issues in real time
+* Identifying the exact root cause instead of only showing speed tests
+* Giving instant step-by-step solutions
+* Reducing downtime and frustration
+* Helping users optimize their home or office WiFi performance
+
+## What Makes It Unique
+
+Unlike regular speed test apps, our project focuses on **diagnosis + solution**, not just measurement.
+
+### Unique Features:
+
+* **AI-based Root Cause Analysis** – Finds why WiFi failed
+* **Predictive Alerts** – Warns users before performance drops
+* **One-Tap Smart Fix Recommendations**
+* **Client-side Detection** – Works directly from user device
+* **WiFi Health Score Dashboard** – Easy for non-technical users
+* **Scalable for ISPs & Enterprises** to reduce support tickets
+
+## One-Line Pitch
+
+> We don’t just test WiFi speed — we diagnose problems, predict failures, and fix them intelligently.
+
+---
+
+Objectives
+
+- To collect WiFi performance data from the user system
+- To analyze network parameters
+- To detect performance degradation
+- To identify root causes of issues
+- To provide simple suggestions for improvement
+
+---
+
+
+## Core Features Implemented
+
+* Real-time WiFi scanning and network status check
+* Signal strength, speed, ping, and latency monitoring
+* WiFi Health Score for overall performance rating
+* Root cause detection for common WiFi issues
+* Weak signal and dead-zone identification
+* Router overload / too many connected devices detection
+* Channel congestion analysis
+* ISP issue vs local WiFi issue identification
+* Instant troubleshooting suggestions
+* Best WiFi channel recommendation
+* 2.4 GHz vs 5 GHz band usage guidance
+* Performance drop and connectivity alerts
+* Simple user-friendly mobile app interface
+* One-tap Scan → Analyze → Detect → Solve workflow
+* Cloud-ready system for future ISP / enterprise integration
+
+---
+
+Methodology
+
+1. Collect WiFi data from the system
+2. Process and normalize the data
+3. Analyze key performance metrics
+4. Detect abnormal behavior
+5. Identify root causes
+6. Display results with suggestions
+
+---
+
+Tools and Technologies
+
+- Python
+- Streamlit
+- Pandas
+- NumPy
+- Basic Machine Learning concepts
+
+---
+
+Expected Outcome
+
+The system helps users understand their WiFi issues clearly and provides suggestions to improve performance, making troubleshooting easier and faster.
+
+---
+
+Applications
+
+- Home network troubleshooting
+- Campus network monitoring
+- Small office network analysis
+
+---
+
+Conclusion
+
+This project provides a simple and effective way to analyze WiFi performance from the user side. It helps in identifying issues quickly and improves the overall user experience.
+
+---
+
+Hackathon / Academic Use
+
+Developed as a Final Year Project and for Hack2Hire 2026.
