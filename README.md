@@ -99,6 +99,16 @@ Objectives
 
 ---
 
+## Tech Stack
+* React 19 + React Router 7
+* Tailwind CSS + Shadcn primitives + Sonner toasts
+* Phosphor Icons
+* jsPDF (client-side PDF export)
+* CRACO (for @/ path alias)
+
+
+---
+
 Methodology
 
 1. Collect WiFi data from the system
