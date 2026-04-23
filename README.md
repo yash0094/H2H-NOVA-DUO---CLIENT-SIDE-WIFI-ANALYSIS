@@ -130,7 +130,18 @@ Tools and Technologies
 
 ---
 
-Expected Outcome
+
+## WHAT IS WIFI 
+
+WiFi( Wireless Fidelity ) is a network that uses radio waves to connect devices like laptops,
+phones and other smart devices to the internet without cables.
+It follows IEEE 802.11 Standards.
+Common Frequency range are 2.4 GHZ (longer range) and 5 GHZ (Faster speed).
+Current Version - WiFi-6.
+
+Industries use Enterprise Network provided by Internet Service Provider (ISP) to access Global internet.
+
+## Expected Outcome
 
 The system helps users understand their WiFi issues clearly and provides suggestions to improve performance, making troubleshooting easier and faster.
 
